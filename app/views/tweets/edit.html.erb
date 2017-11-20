@@ -1,0 +1,6 @@
+<h1>수정하기</h1>
+<%=form_for(@tweet, url: {action: "update"}) do |f|%>
+  <%=f.text_field :title, value: "#{@tweet.title}"%>
+  <%=f.text_field :content, value: "#{@tweet.content}"%>
+  <%= f.submit("수정하기")%>
+<% end %>

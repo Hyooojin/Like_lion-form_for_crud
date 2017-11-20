@@ -1,0 +1,8 @@
+<h1>트윗하나 보여주기</h1>
+
+
+제목<%=@tweet.title%><br>
+내용 <%=@tweet.content%><br>
+<%=link_to "수정", edit_tweet_path(@tweet.id)%>
+<%=link_to "삭제", tweet_path(@tweet.id), method:"delete"%>
+<!-- id를 안 써도 알아서 찾아가기도 한다. -->

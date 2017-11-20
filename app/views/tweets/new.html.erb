@@ -1,0 +1,8 @@
+<h1>Tweet</h1>
+<%=form_for(@tweet) do |f|%>
+  title: <%=f.text_field :title%><br>
+  content: <%=f.text_field :content%><br>
+ 사진 업로드: <%=f.file_field :photo_url %>
+  <%=f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit("tweet")%>
+<% end %>
